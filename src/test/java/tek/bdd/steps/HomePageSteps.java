@@ -7,13 +7,13 @@ import io.cucumber.java.en.When;
 
 public class HomePageSteps {
 
-    @Given("Navigate to home page")
-    public void NavigateToHomePage () {
-        System.out.println("navigate to the home page");
+    @Given("user has loaded {string} browser")
+    public void UserHasLoadedChromeBrowser(String browser ) {
+        System.out.println("Load " + browser);
     }
 
-    @When("the home page is loaded")
-    public void TheHomePageIsLoaded () {
+    @When("user navigates to home page")
+    public void UserNavigatesToHomePage () {
         System.out.println("The home page is loaded");
     }
 
