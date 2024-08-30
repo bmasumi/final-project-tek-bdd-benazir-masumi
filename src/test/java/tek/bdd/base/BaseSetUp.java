@@ -7,10 +7,10 @@ import java.time.Duration;
 
 public class BaseSetUp {
 
-    private WebDriver driver;
+    private static WebDriver driver;
 
     public void setupBrowser() {
-        ChromeDriver driver = new ChromeDriver();
+        driver = new ChromeDriver();
         driver.get("https://dev.insurance.tekschool-students.com/");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
@@ -23,4 +23,11 @@ public class BaseSetUp {
 
         }
     }
+
+    public WebDriver getDriver() {
+        return driver;
+    }
+
 }
+
+
