@@ -1,30 +1,22 @@
 package tek.bdd.steps;
 
-import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
+import org.junit.Assert;
+import tek.bdd.utility.SeleniumUtility;
 
-public class HomePageSteps {
+public class HomePageSteps extends SeleniumUtility {
+    @Given("open browser and navigate to insurance app")
+    public void openBrowserAndNavigate() {setupBrowser();}
+    @Then("validate home page title is {string}")
+    public void validateTheTitleIs(String expectedResult) {
+        String actualResult = getTitleElement();
 
-    @Given("user has loaded {string} browser")
-    public void UserHasLoadedChromeBrowser(String browser ) {
-        System.out.println("Load " + browser);
+        Assert.assertEquals(     "TEKSchool Insurance App" , actualResult);
+
     }
 
-    @When("user navigates to home page")
-    public void UserNavigatesToHomePage () {
-        System.out.println("The home page is loaded");
-    }
 
-    @Then("the title is TEK Insurance UI")
-    public void TheTitleIsTEKInsuranceUI () {
-        System.out.println("the title is TEK Insurance UI");
-    }
 
-    @And("the create Primary Account button exists")
-    public void TheCreatePrimaryAccountButtonExists () {
-        System.out.println("the create primary account button exists");
-    }
 
 }
