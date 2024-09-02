@@ -1,6 +1,6 @@
 Feature: This is the home page validation
 
-  Scenario: Validate When user navigate to home page title is TEK Insurance UI
+  Scenario: Validate When user navigate to home page title is Tek Insurance UI
   and create Primary Account Button is exist
 
     Then validate TEK Insurance UI is exist

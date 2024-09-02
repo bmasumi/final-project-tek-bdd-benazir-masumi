@@ -6,9 +6,8 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "classpath:feature/HomePage.feature",
-        glue = "tek.bdd.steps",
-        dryRun = true
+        features = "classpath:feature/CreateAccount.feature",
+        glue = "tek.bdd.steps"
 )
 public class TestRunner {
 }
